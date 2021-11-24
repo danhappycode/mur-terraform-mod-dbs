@@ -4,7 +4,7 @@ provider "aws" {
 
 # Lookup the EKS cluster that we created for the Microservices
 data "aws_eks_cluster" "microservice-cluster" {
-  name = "${var.eks_id}"
+  name = var.eks_id
 }
 
 # The RDS subnet group that points to the subnets we've declared above
